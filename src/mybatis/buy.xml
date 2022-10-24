@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="buy">
+	<insert id="insert" parameterType="store.Buy">
+		INSERT INTO store_buy (buy_id,pcode,custom_id,amount,pname)
+		VALUES (Buy_seq.nextval,#{pcode},#{custom_id},#{amount},#{pname})
+	</insert>
+	
+	<select id="select" resultType="store.Store">
+		select * from store_product where pcode = #{pcode}
+	</select>
+	
+	<insert id="insertCart" parameterType="store.Cart">
+		INSERT INTO store_cart (cart_id,pcode,pname,price,composition,custom_id,amount,filename)
+		VALUES (cart_seq.nextval,#{pcode},#{pname},#{price},#{composition},#{custom_id},#{amount},#{filename})
+	</insert>
+	
+	<select id="selectCart" resultType="store.Cart">
+		select * from store_cart where custom_id = #{custom_id}
+	</select>
+	
+	<select id="selectPrice" resultType="Integer">
+		SELECT (price*amount) FROM STORE_CART sc where custom_id = #{custom_id}
+	</select>
+	
+	<delete id="deleteCart" parameterType="store.Cart">
+		DELETE FROM STORE_CART WHERE custom_id = #{custom_id}
+	</delete>
+</mapper>

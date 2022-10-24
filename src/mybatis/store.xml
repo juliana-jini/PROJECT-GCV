@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="store">
+	<select id="listStore" resultType="store.Store">
+		select * from store_product 
+	</select>
+	
+	<select id="detail" resultType="store.Store" parameterType="String">
+		SELECT * FROM store_product where pcode = #{pcode}
+	</select>
+	
+	<!-- 카테고리별 출력 -->
+	<select id="listCategory" resultType="store.Store">
+		select * from store_product where category = #{category}
+	</select>	
+</mapper>

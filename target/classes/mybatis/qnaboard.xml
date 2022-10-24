@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qnaboard">
+	<select id="getPageList" 
+		parameterType="java.util.Map"
+		resultType="vo.QnAboard">
+		SELECT * FROM
+			(SELECT rownum r, q.* FROM
+				(SELECT * FROM movie_QnAboard ORDER BY idx DESC) q) 
+		WHERE r BETWEEN #{startNo} AND #{endNo}
+	</select>
+	
+	<select id="getCount" resultType="int">
+		SELECT count(*) FROM movie_QnAboard
+	</select>
+	
+	<select id="detail" resultType="vo.QnAboard" parameterType="int">
+		SELECT * FROM movie_QnAboard WHERE idx = #{idx}
+	</select>
+	
+	<insert id="insert" parameterType="vo.QnAboard">
+		INSERT INTO movie_QnAboard (idx, custom_id, password, subject, content, ip)
+		VALUES (QnAboard_seq.nextval, #{custom_id}, #{password}, #{subject}, #{content}, #{ip})
+	</insert>
+	
+	<update id="readcountUp">
+		UPDATE movie_QnAboard
+		SET READCOUNT = READCOUNT +1
+		WHERE idx = #{idx}
+	</update>
+	
+	<delete id="delete" parameterType="java.util.Map">
+		DELETE FROM movie_QnAboard WHERE idx=#{idx} and password=#{password}
+	</delete>
+	
+	<update id="update" parameterType="vo.QnAboard">
+		UPDATE movie_QnAboard 
+		SET subject=#{subject}, content=#{content}, wdate=sysdate
+		WHERE idx = #{idx}
+	</update>
+</mapper>

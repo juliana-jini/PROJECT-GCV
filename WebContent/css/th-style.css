@@ -1,0 +1,140 @@
+@charset "utf-8";
+*{
+	margin:0 auto;
+	padding:0;
+	list-style:none;
+	box-sizing:border-box;
+}
+a{text-decoration:none;color:inherit;}
+.clear{clear:both;}
+#con1{
+	background-color:white;
+	width:804px;
+}
+/*탭*/
+#tabTitle{
+	width:804px;
+	height:33.5px;
+	border:1px solid #ccc;
+	border-bottom:1px solid #e71616;	
+	text-align: center;
+}
+#tabTitle li{
+	display:inline-block;
+	height:33.5px;
+	cursor:pointer;
+	text-align: center;
+	line-height:33.5px;
+}
+.tab-tt.current{
+	font-weight:bold;
+	color:#e71616;
+	}
+.tab-tt {
+	font-size:14px;
+	color:#6a6f77;
+	width:9%;
+}
+.tab-con{
+	border:1px solid #ccc;
+	border-top:1px solid #e71616;
+	display:none;
+	width:804px;
+	height:40.2px;
+	color:#6a6f77;
+	font-size: 12px;
+}
+.tab-con.current{
+	display:flex;
+	justify-content: space-around;
+	line-height:40.2px;
+	}
+.tab-con a:hover {
+	border-bottom: 3px solid #e71616;
+	cursor: pointer;
+}
+/* 기존에 있던 코드들 */
+	.reservation{
+	width: 804px;
+    text-align: center;
+    padding-bottom:10px;
+    padding-top:10px
+}
+	.reservation ul{
+					text-align:center;}
+	.reservation li{ display:inline-block;
+	
+	line-height:7px;}
+	.reservation a{
+	background: #fb4357;
+	color: white;
+	display: inline-block;
+    position: relative;
+    height: 26px;
+    padding: 0 10px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 26px;
+	}
+	.user-wrap {
+	width: 100%;
+	margin: 10px auto;
+	position: relative;
+}	
+	.user-wrap img {
+	vertical-align: middle;
+	width:804px;
+	height:439px;
+}
+	.user-text_bgr {
+	position: absolute;
+	top:91%;
+	left:50%;
+	width: 804px;
+	height: 77px;
+	transform: translate(-50%,-50%);
+	font-size: 12px;
+	color: white;
+	background-color: rgba( 0, 0, 0, 0.7 );
+}
+	.user-image {
+	width:804px;
+	height:439px;
+	}
+	.user-wrap2{
+	height:80%;}
+	.user-wrap2 img {
+	vertical-align: middle;
+	width: 804px;
+	height:60px;}
+	.user-image2 {
+	width:804px;
+	height: 60px;}
+	
+	#map {
+	display:inline-block;
+	width:400px;
+	height:335px;
+	}
+	.map {
+	width:804px;
+	height:536px;
+	
+	}
+	.bus-info {
+	display:inline-block;
+	width:400px;
+	height:536x;
+	position: absolute;
+	}
+
+	.info {
+	width:268px;	
+	height:305.52px;
+	font-size:10px;
+	margin-left: 5px;
+	}
+
+	

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="movie">
+  	<insert id="insert" parameterType="vo.movie">
+  	INSERT INTO MOVIE (MOVIE_ID,MOVIE_NAME,ADVANCE_RATE,MOVIE_GRADE,AUDIENCE,MOVIE_RANK,MOVIE_OPENDT) VALUES (movie_seq.nextval,#{movie_name},#{ADVANCE_RATE},#{MOVIE_GRADE},#{audience},#{MOVIE_RANK},#{MOVIE_OPENDT})
+  	</insert>
+  	<select id="get" resultType="vo.movie">
+  	select * from movie order by movie_rank
+  	</select>
+  	<select id="getPage" resultType="vo.movie">
+  	SELECT * from
+	(SELECT rownum r, f.* from
+		(SELECT * FROM movie ORDER BY movie_id) f) WHERE r BETWEEN #{startNo} AND #{endNo}
+  	</select>
+  	 <select id="getCount" resultType="int">
+ SELECT count(*) FROM movie
+ </select>
+ 	<select id="getMovie" parameterType="int" resultType="vo.movie">
+ 		select * from movie where movie_id=#{movie_id}
+ 	</select>
+ 	<insert id="info_insert" parameterType="vo.movie_info">
+ 	insert into movie_info(movie_id, movie_info, director, actors, genre) values(#{movie_id}, #{movie_info}, #{director}, #{actors}, #{genre})
+ 	</insert>
+ 	<select id="getMovie_info" parameterType="int" resultType="vo.movie_info">
+ 		select * from movie_info where movie_id=#{movie_id}
+ 	</select>
+ 	<select id="getReview" resultType="vo.review">
+ 		select * from review where movie_id=#{movie_id}
+ 	</select>
+ 	<insert id="insertReivew" parameterType="vo.review">
+ 		INSERT INTO REVIEW (review_idx, CUSTOM_ID,MOVIE_ID,REVIEW_INFO,WDATE,HEARTCOUNT,grade) VALUES (review_seq.nextval, #{custom_id},#{movie_id},#{review_info},sysdate,0,#{grade})
+ 	</insert>
+ 	<select id="searchMovie" parameterType="String" resultType="vo.movie">
+ 	select * from movie where movie_name like '%'||#{find}||'%'
+ 	</select>
+ 	<delete id="delete">
+DELETE FROM REVIEW WHERE REVIEW_IDX=#{review_idx}
+ 	
+ 	</delete>
+  </mapper>

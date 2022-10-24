@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="comments">
+	<select id="getComments" parameterType="int" resultType="vo.Comment">
+		SELECT * FROM movie_commentboard WHERE mref = #{mref}
+	</select>
+	
+	<insert id="insert" parameterType="vo.Comment">
+		INSERT INTO movie_commentboard (idx, mref, custom_id,content)
+		VALUES (commentboard_seq.nextval,#{mref},#{custom_id},#{content})
+	</insert>
+	
+	<update id="updateCmtCount" parameterType="int">	<!-- qnaboard 테이블의 댓글 개수 업데이트 -->
+		UPDATE movie_QnAboard 
+		SET COMMENTCOUNT = (SELECT count(*) 
+				FROM movie_commentboard WHERE mref = #{mref})
+		WHERE idx = #{mref}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM movie_commentboard WHERE idx = #{idx}
+	</delete>
+</mapper>

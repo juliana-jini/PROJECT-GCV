@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.header_contents {
+  display: block;
+  background-color: white;
+}
+
+.contents a {
+  text-decoration: none;
+  color: black;
+}
+
+.contents {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 6px 25px 5px;
+}
+
+#logo_img {
+  margin-right: 100px;
+}
+
+.member_info {
+  margin-right: 35px;
+}
+
+.card_event img {
+  width: 150px;
+}
+
+.member_info_image img {
+  margin-left: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+#login_span {
+  margin-left: -46px;
+}
+
+#sign_span {
+  margin-left: -52px;
+}
+
+#my_span {
+  margin-left: -50px;
+}
+
+#custom_span {
+  margin-left: -52px;
+}
+
+.member_info span {
+  position: absolute;
+  font-size: 14px;
+  line-height: 8em;
+}
+
+.member_info a {
+  color: black;
+}
+
+/* .contents > p {
+  font-weight: 300px;
+  font-size: 16px;
+  line-height: 1.5em;
+} */
+
+#logo {
+  width: 120px;
+}
+
+.menubar_container {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #e71616;
+}
+
+.main_menubar {
+  list-style: none;
+  display: flex;
+  margin-right: 310px;
+}
+
+.main_menubar li {
+  padding-left: 60px;
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.hide_menu {
+  border-spacing: 10px;
+  width: 700px;
+  height: 0px;
+  position: fixed;
+  background-color: white;
+  transition: all 0.2s;
+  top: 10.5rem;
+  margin-right: 42.4%;
+  table-layout: fixed;
+  clear: both;
+  display: none;
+  z-index: 1;
+}
+
+.on {
+  height: auto;
+}
+
+th {
+  font-size: 17px;
+  cursor: pointer;
+}
+
+tr {
+  font-size: 14px;
+  text-align: center;
+}
+
+td {
+  cursor: pointer;
+}
+
+.search_form {
+  margin-right: 90px;
+  margin-top: 30px;
+  clear: both;
+}
+
+#visible_keyword {
+  font-size: 17px;
+  margin-bottom: 20px;
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+.search_button {
+  border: none;
+}
+
+.search_button img {
+  width: 25px;
+  height: auto;
+  margin-bottom: -8px;
+}
+
+.fixedBtn_wrap {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  right: 100px;
+  bottom: 80px;
+  min-height: 50px;
+  margin-left: 440px;
+  text-align: center;
+  z-index: 7;
+}
+
+.fixedBtn_wrap.topBtn .btn_fixedTicketing {
+  right: 58px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fixedBtn_wrap .btn_fixedTicketing {
+  position: absolute;
+  left: auto;
+  right: 0px;
+  width: 136px;
+  padding: 12px 0 14px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.5em;
+  background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
+  box-shadow: 1px 3px 6px 0 rgb(0 0 0 / 30%);
+  border-radius: 25px;
+  transition: right 0.4s;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.fixedBtn_wrap #btn_gotoTop {
+  display: flex;
+  justify-content: center;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-shadow: 1px 3px 6px 0 rgb(0 0 0 / 30%);
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  transform: translatY(-100%);
+  border-top: 2px solid #e71616;
+  background-color: white;
+  margin-top: 100px;
+}
+
+.footer_ul {
+  padding: 0px 330px;
+  display: flex;
+  list-style: none;
+  font-size: 13px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.footer_ul li {
+  cursor: pointer;
+}
+
+.gcv_info {
+  display: flex;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.gcv_info_wrap {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.667em;
+  margin-right: 438px;
+}
+
+.familysite_wrap {
+  position: relative;
+  margin-top: 50px;
+}
+.btn_fixedTicketing {
+  width: 136px;
+  padding: 12px 20px 14px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.5em;
+  background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
+  box-shadow: 1px 3px 6px 0 rgb(0 0 0 / 30%);
+  border-radius: 25px;
+  transition: right 0.4s;
+  opacity: 1;
+  margin-top: 0px
+}
+html, body {
+    height: 100%
+}

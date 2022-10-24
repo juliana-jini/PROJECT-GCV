@@ -1,0 +1,131 @@
+/* ----------------------1페이지------------------------ */
+
+    * {box-sizing: border-box;}
+
+/* Style the tab */
+.tab_c {
+  float: left;
+  border: 1px solid #000;
+  background-color: #f1f1f1;
+  width: 200px	;
+  height: 712px;
+  text-align:center;
+  margin-left: 37%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab_c button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab_c button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab_c button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent_c {
+  float: left;
+  width: 200px;
+  border-left: none;
+  height: 712px;
+  text-align:center;
+}
+
+.q {margin:auto;}
+
+/* Style the tab2 */
+.tab_m {
+  float: left;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background-color: #f1f1f1;
+  width: 200px	;
+  height: 712px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab_m button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab_m button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab_m button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent_m {
+  float: left;
+  width: 200px	;
+  border-left: none;
+  height: 712px;
+}
+/* Style the tab3*/
+.tab3 {
+  float: left;
+  border: 1px solid #000;
+  background-color: #f1f1f1;
+  width: 200px	;
+  height: 712px;
+}
+
+.tab3 button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* Create an active/current "tab button" class */
+.tab3 button:focus {
+  background-color: #ccc;
+}
+
+.j_submit	{
+	display: inline-block;
+    position: relative;
+    height: 39px;
+    padding: 0 15px;
+    background: #fb4357 0 12px no-repeat;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 39px;
+    margin-top: 750px;
+    margin-left:-400px;
+	}

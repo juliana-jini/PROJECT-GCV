@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* ----------------------3페이지------------------------ */
+
+small {
+margin-right:28px;}
+.seat {
+margin-right:30px;
+margin-bottom: 20px;
+margin-top: 20px;}
+.cbx1 {
+margin-left: -125px;
+margin-top: -30px;}
+hr {
+width: 510px;
+    margin-left: 0px;}
+#btn {
+    float: right;
+    margin-right: 80px;
+    width: 100px;
+    height: 50px;}
+.btn2 {
+	float:left;
+	margin-left: 80px;
+	width: 100px;
+    height: 50px;}
